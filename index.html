@@ -6,7 +6,7 @@ Responsive website & project portfolio
 <html lang="en" dir="ltr">
   <head>
       <meta charset="utf-8">
-      <link rel="stylesheet" href="src/css/master.css">
+      <link rel="stylesheet" href="src/css/style.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,13 +14,15 @@ Responsive website & project portfolio
       <title>Joshua Champagne | Portfolio</title>
   </head>
   <body>
+
     <!-- Hero Section -->
     <section class="hero">
       <nav>
-          <img class="logo" src="src/img/logo.png" alt="JC Logo">
+          <a href="http://joshuachampagne.com"><img class="logo" src="src/img/logo.png" alt="Josh Logo"></a>
           <ul id='nav-list'>
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#contact">Contact Me</a></li>
           </ul>
           <button class="hamburger" id="hamburger">
@@ -52,6 +54,7 @@ Responsive website & project portfolio
         </div>
       </div>
     </section>
+
     <!-- About Me Section -->
     <section class="about-section" id="about">
         <div class="info">
@@ -66,6 +69,7 @@ Responsive website & project portfolio
             <img class="headshot" src="src/img/headshot.jpg" alt="JC Headshot">
         </div>
     </section>
+
     <!-- Projects Section -->
     <section class="project-section" id="projects">
         <h2>Projects</h2>
@@ -78,11 +82,11 @@ Responsive website & project portfolio
                 <p class="subtext"><a class="project-link" href="https://github.com/joshua-champagne/personal-portfolio">View Here</a></p>
             </div>
             <div class="project-card">
-                <img class="project-image" src="" alt="Project Two Image">
-                <h3>Project Two</h3>
-                <p class="subtext">This is my project and some text about it.</p>
+                <img class="project-image" src="src\img\project2.jpg" alt="Project Two Image">
+                <h3>Django CMS Project</h3>
+                <p class="subtext">This is a project I designed to learn Django and how it interacts with Python, HTML, Bootstrap and MySQL.</p>
                 <hr>
-                <p class="subtext"><a class="project-link" href="https://www.github.com">View Here</a></p>
+                <p class="subtext"><a class="project-link" href="https://github.com/joshua-champagne/django-project">View Here</a></p>
             </div>
             <div class="project-card">
                 <img class="project-image" src="" alt="Project Three Image">
@@ -100,11 +104,25 @@ Responsive website & project portfolio
             </div>
         </div>
     </section>
+
+    <!-- Hobbies Section -->
+    <section class="hobbies-section" id="hobbies">
+        <div class="hobbies-container">
+            <h2>Hobbies</h2>
+            <p>When I'm not coding and learning new technolgies, you can often find me cooking, eating, watching movies, or exploring the incredible beauty of Maine.</p>
+            <br>
+            <p>I am also a former music teacher, conductor, and musician. I specialize in playing drums, percussion, keyboard and still love making music both professionally and in my home.</p>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <footer id="contact">
-        <p>Joshua Champagne Copyright ©2022</p>
-        <h2>Contact Me</h2>
-        <p>Insert Form Here</p>
+    <footer class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="button"><a href = "mailto: champagne.joshua@gmail.com">Contact Me</a></div>
+        </div>
+        <div class="copyright">
+            <span>Copyright ©2022 Joshua Champagne</span>
+        </div>
     </footer>
     <script type="text/javascript" src="src/app.js"></script>
   </body>
