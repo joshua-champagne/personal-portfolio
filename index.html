@@ -1,135 +1,210 @@
 <!--
-Joshua Champagne 2021
-Responsive website & project portfolio
+Joshua Champagne 2022
+Responsive site & personal portfolio
+Update: Sept 2022 - Recongifured for Bootstrap 5 & Semantic HTML
 -->
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-      <meta charset="utf-8">
-      <link rel="stylesheet" href="src/css/style.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-      <script src="https://kit.fontawesome.com/a8d16c3c9e.js" crossorigin="anonymous"></script>
-      <title>Joshua Champagne | Portfolio</title>
-  </head>
-  <body>
+<html lang="en">
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <nav>
-          <a href="http://joshuachampagne.com"><img class="logo" src="src/img/logo.png" alt="Josh Logo"></a>
-          <ul id='nav-list'>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-          </ul>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="src/css/style.css">
+
+  <!-- Font Imports -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <title>Joshua Champagne | Portfolio</title>
+</head>
+
+<body>
+
+  <!-- Primary Nav -->
+  <nav class="nav-container">
+    <div class="container">
+      <div class="row">
+        <a class="col-2" href="http://joshuachampagne.com" target="_self"><img class="logo" src="src/img/logo.png"
+            alt="Portfolio Logo"></a>
+        <div class="nav justify-content-end align-items-center col-10">
+          <a class="nav-link" href="#about">About Me</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#hobbies">Hobbies</a>
+          <a class="nav-link" href="#contact">Blog</a>
+          <a class="nav-link" href="#contact">Contact Me</a>
           <button class="hamburger" id="hamburger">
-              <i class="fas fa-bars"></i>
+            <i class="fas fa-bars"></i>
           </button>
-      </nav>
-      <div class="hero-container">
-        <div class="hero-text">
-            <h1>Joshua Champagne | Test</h1>
-            <p>Full Stack Developer</p>
-            <div class="button"><a href="#about">About Me</a></div>
-        </div>
-        <div class="hero-socials">
-            <div>
-                <a href="https://www.twitter.com/jchampagne213" class="social">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="50" height="50" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                </a>
-            </div>
-            <div>
-                <a href="https://github.com/joshua-champagne"  class="social">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="50" height="50" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-            </div>
-            <div>
-                <a href="https://www.linkedin.com/in/joshua-champagne"  class="social">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="50" height="50" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
-                </a>
-            </div>
         </div>
       </div>
-    </section>
+  </nav>
 
-    <!-- About Me Section -->
-    <section class="about-section" id="about">
-        <div class="info">
-            <h2>About Me</h2>
-            <p>Hello, my name is Joshua Champagne and I am a former teacher turned software developer. I'm learning full-stack web development through university courses, online guided coded courses, and practicing coding everyday.
-            I am a veracious learner and passionate about bringing ideas to life through various web technologies and frameworks.</p>
-            <br>
-            <p>I'm comfortable with responsive HTML5, CSS3, and front-end tools like Javascript, PHP, Boostrap and Wordpress. I've also worked with backend services utilizing Python and mySQL.
-            I'm currently working on putting together a portfolio of small projects and am building a large personal project in the Django CMS.</p>
-            <br>
-            <p>I have additional experience in the Information Technology field serving as a Level 1 Help Desk Technician for 3 years. While in this role I helped update and maintain hundreds of production machines as well as maintain
-            and update production code for various projects in a number of languages including Perl, Lisp, and Python. I also updated and managed internal documentation pages using HTML and CSS.</p>
+  <!-- Hero Section -->
+  <section class="hero-container py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-10 hero-text">
+          <h1 class="display-1">Joshua Champagne</h1>
+          <h2>Full Stack Developer</h2>
+          <a class="btn btn-primary btn-lg my-2" href="#about">About Me</a>
         </div>
-        <div class="headshot-container">
-            <img class="headshot" src="src/img/headshot.jpg" alt="JC Headshot">
+        <div class="col-2 text-end hero-socials">
+          <div>
+            <a href="https://www.twitter.com/jchampagne213" class="bi bi-twitter social-icon"></a>
+          </div>
+          <div>
+            <a href="https://github.com/joshua-champagne" class="bi bi-github social-icon"></a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/joshua-champagne" class="bi bi-linkedin social-icon"></a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section class="project-section" id="projects">
+  <!-- About Me Section -->
+  <section class="about-container py-4" id="about">
+    <div class="container">
+      <div class="row  py-5">
+        <h2>About Me</h2>
+      </div>
+      <div class="row align-items-center">
+        <div class="about-text col-8">
+          <p>Hello, my name is Joshua Champagne and I am a former teacher turned software developer. I'm learning
+            full-stack web development through university courses, online guided coded courses, and practicing coding
+            everyday.
+            I am a veracious learner and passionate about bringing ideas to life through various web technologies and
+            frameworks.</p>
+          <br>
+          <p>I'm comfortable with responsive HTML5, CSS3, and front-end tools like Javascript, PHP, Boostrap and
+            Wordpress. I've also worked with backend services utilizing Python and mySQL.
+            I'm currently working on putting together a portfolio of small projects and am building a large personal
+            project in the Django CMS.</p>
+          <br>
+          <p>I have additional experience in the Information Technology field serving as a Level 1 Help Desk Technician
+            for 3 years. While in this role I helped update and maintain hundreds of production machines as well as
+            maintain
+            and update production code for various projects in a number of languages including Perl, Lisp, and Python. I
+            also updated and managed internal documentation pages using HTML and CSS.</p>
+        </div>
+        <div class="headshot-container col-4">
+          <img class="headshot" src="src/img/headshot.jpg" alt="JC Headshot">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects-container py-4" id="projects">
+    <div class="container">
+      <div class="row py-5">
         <h2>Projects</h2>
-        <div class="project-container">
-            <div class="project-card">
-                <img class="project-image" src="src\img\project1.jpg" alt="Project One Image">
-                <h3>Responsive Portfolio</h3>
-                <p class="subtext">Simple portfolio site built from scratch. Designed to show case HTML5, CSS3, & JS.</p>
-                <hr>
-                <p class="subtext"><a class="project-link" href="https://github.com/joshua-champagne/personal-portfolio">View Here</a></p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card h-100 shadow text-center" style="width: 18rem;">
+            <img src="src\img\project1.jpg" class="card-img-top mx-auto" alt="Project One Image">
+            <div class="card-body">
+              <h5 class="card-title">Responsive Portfolio</h5>
+              <p class="card-text">Simple portfolio site built from scratch. Designed to show case HTML5, CSS3, & JS.
+              </p>
+              <hr>
+              <a href="https://github.com/joshua-champagne/personal-portfolio" class="btn btn-primary">View Here</a>
             </div>
-            <div class="project-card">
-                <img class="project-image" src="src\img\project2.jpg" alt="Project Two Image">
-                <h3>Django CMS Project</h3>
-                <p class="subtext">This is a project I designed to learn Django and how it interacts with Python, HTML, Bootstrap and MySQL.</p>
-                <hr>
-                <p class="subtext"><a class="project-link" href="https://github.com/joshua-champagne/django-project">View Here</a></p>
-            </div>
-            <div class="project-card">
-                <img class="project-image" src="src/img/project3.jpg" alt="Project Three Image">
-                <h3>Bootstrap RPS</h3>
-                <p class="subtext">A simple Rock, Paper, Scissors game in Javascript and Bootstrap.</p>
-                <hr>
-                <p class="subtext"><a class="project-link" href="https://github.com/joshua-champagne/bootstrap-rps">View Here</a></p>
-            </div>
-            <div class="project-card">
-                <img class="project-image" src="src/img/project4.jpg" alt="Project Four Image">
-                <h3>Python & NumPy</h3>
-                <p class="subtext">An early Python project in PyCharm utilizing NumPy for data analysis and visualization.</p>
-                <hr>
-                <p class="subtext"><a class="project-link" href="https://github.com/joshua-champagne/numpy-visual">View Here</a></p>
-            </div>
+          </div>
         </div>
-    </section>
+        <div class="col">
+          <div class="card h-100 shadow text-center" style="width: 18rem;">
+            <img src="src\img\project2.jpg" class="card-img-top mx-auto" alt="Project Two Image">
+            <div class="card-body">
+              <h5 class="card-title">Django CMS Project</h5>
+              <p class="card-text">This is a project I designed to learn Django and how it interacts with Python, HTML,
+                Bootstrap and MySQL.</p>
+              <hr>
+              <a href="https://github.com/joshua-champagne/django-project" class="btn btn-primary">View Here</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow text-center" style="width: 18rem;">
+            <img src="src\img\project3.jpg" class="card-img-top mx-auto" alt="Project Three Image">
+            <div class="card-body">
+              <h5 class="card-title">Bootstrap RPS</h5>
+              <p class="card-text">A simple Rock, Paper, Scissors game in Javascript and Bootstrap.</p>
+              <hr>
+              <a href="https://github.com/joshua-champagne/bootstrap-rps" class="btn btn-primary">View Here</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow text-center" style="width: 18rem;">
+            <img src="src\img\project4.jpg" class="card-img-top mx-auto" alt="Project Four Image">
+            <div class="card-body">
+              <h5 class="card-title">Python & NumPy</h5>
+              <p class="card-text">An early Python project in PyCharm utilizing NumPy for data analysis and
+                visualization.</p>
+              <hr>
+              <a href="https://github.com/joshua-champagne/numpy-visual" class="btn btn-primary">View Here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Hobbies Section -->
-    <section class="hobbies-section" id="hobbies">
-        <div class="hobbies-container">
-            <h2>Hobbies</h2>
-            <p>When I'm not coding and learning about new technolgies, you can often find me cooking, checking out new restaurants, watching classic movies, and exploring the incredible beauty of Maine.
-              I've also recently taken up learning French on Duolingo in hopes to visit Quebec soon!</p>
-            <br>
-            <p>As a former music teacher and conductor, music is a large part of my life. I specialize in playing drums, percussion, and piano and still love making music both professionally and in my free time.</p>
-        </div>
-    </section>
+  <!-- Hobbies Section -->
+  <section class="hobbies-container py-4" id="hobbies">
+    <div class="container">
+      <div class="row py-5">
+        <h2>Hobbies</h2>
+      </div>
+      <div class="row hobbies-text">
+        <p>When I'm not coding and learning about new technolgies, you can often find me cooking, checking out new
+          restaurants, watching classic movies, and exploring the incredible beauty of Maine.
+          I've also recently taken up learning French on Duolingo in hopes to visit Quebec soon!</p>
+        <br>
+        <p>As a former music teacher and conductor, music is a large part of my life. I specialize in playing drums,
+          percussion, and piano and still love making music both professionally and in my free time.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <footer class="contact-section" id="contact">
-        <div class="contact-container">
-            <div class="button"><a href = "mailto: champagne.joshua@gmail.com">Contact Me</a></div>
+  <!-- Contact Section -->
+  <footer class="footer-container text-center" id="contact">
+    <div class="container">
+      <div class="row py-5">
+        <div>
+          <!-- <div class="btn btn-primary btn-lg">Contact Me</div> -->
+          <a href="mailto: champagne.joshua@gmail.com" class="btn btn-primary btn-lg">Contact Me</a>
         </div>
-        <div class="copyright">
-            <span>Copyright ©2022 Joshua Champagne</span>
-        </div>
-    </footer>
-    <script type="text/javascript" src="src/app.js"></script>
-  </body>
+      </div>
+      <div class="row pb-5 copyright-text">
+        <p>Copyright ©2022 Joshua Champagne</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script type="text/javascript" src="src/js/app.js"></script>
+
+  <!-- Separate Popper and Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+</body>
 
 </html>

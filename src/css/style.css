@@ -1,139 +1,42 @@
 /*
 Joshua Champagne 2021
-Responsive website & project portfolio
+Responsive website & personal portfolio
+Update: April 2022 - Bootstrap 5 Added
 */
 
-* {
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  margin: 0;
-}
-
-section {
-  background-color: #ffffff;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-ul {
-  display: flex;
-  list-style-type: none;
-  width: 700px;
-  justify-content: space-around;
-  font-size: 30px;
-}
-
-ul.show {
-  display: block;
-}
-
-li {
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 90px;
-  margin: 0px;
-}
-
-h2 {
-  font-size: 50px;
-}
-
-h3 {
-  font-size: 30px;
-}
-
-p {
-  margin: 0px;
-  font-size: 30px;
-  font-weight: 300;
-}
-
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-a:hover {
-  color: #bababa;
-}
-
-hr {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-footer {
-  color: #ffffff;
+.nav-container {
   background-color: #1c1d25;
-  padding: 80px;
 }
 
 .logo {
   height: 80px;
-  margin: 30px;
-}
-
-/* Only displays under 1000px */
-.hamburger {
-  display: none;
-}
-
-.hero {
-  background-color: #1c1d25;
-  height: 100vh;
+  margin-top: 20px;
+  font-size: 4rem;
   color: #ffffff;
-  font-size: 40px;
+}
+
+.nav {
+  font-size: 30px;
 }
 
 .hero-container {
-  display: flex;
-  height: 100%;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #1c1d25;
 }
 
 .hero-text {
-  margin-left: 80px;
-  margin-bottom: 200px;
+  color: #ffffff;
+  margin: 200px 0;
 }
 
-.hero-socials {
-  padding-bottom: 200px;
-  margin: 20px;
+.social-icon {
+  color: #ffffff;
+  font-size: 3.5rem;
 }
 
-.button {
-  width: 200px;
-  height: 50px;
-  background-color: #ff7f50;
-  border-radius: 30px;
-  text-align: center;
+.about-text p,
+.hobbies-text p {
   font-size: 30px;
   font-weight: 300;
-  padding-top: 5px;
-  margin-top: 20px;
-}
-
-.button:hover {
-  background-color: #ff5a1d;
-}
-
-.about-section {
-  display: flex;
-  justify-content: space-around;
-  padding: 80px;
-}
-
-.headshot-container {
-  display: flex;
-  align-items: center;
 }
 
 .headshot {
@@ -141,75 +44,29 @@ footer {
   border-radius: 150px;
 }
 
-.project-section {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 80px;
-}
-
-.project-container {
-  display: flex;
-  justify-content: center;
-}
-
-.project-card {
-  width: 250px;
-  height: 525px;
-  box-shadow: 5px 5px 20px #d3d3d3;
-  margin: 10px;
-}
-
-.project-image {
+.card-img-top {
   margin-top: 25px;
   width: 200px;
   border-radius: 100px;
 }
 
-.project-link {
-  text-decoration: none;
-  color: #ff7f50;
+.footer-container {
+  background-color: #1c1d25;
 }
 
-.hobbies-section {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding: 80px;
-}
-
-.hobbies-container {
-
-}
-
-.contact-section {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.contact-container {
-  display: flex;
-  justify-content: center;
-}
-
-.copyright {
+.copyright-text {
+  color: #ffffff;
   font-size: 20px;
   font-weight: 200;
-  margin-top: 30px;
 }
 
-.subtext {
-  font-size: 15px;
-  font-weight: 300;
+/* Only displays under 1000px */
+.hamburger {
+  display: none;
 }
 
 /* For viewing on smaller screens */
 @media only screen and (max-width: 1000px) {
-  .project-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
 
   .hamburger {
     display: block;
@@ -223,16 +80,6 @@ footer {
 
   .logo {
     display: none;
-  }
-
-  ul {
-    display: none;
-    background-color: #2b2c38;
-    margin: 0px;
-  }
-
-  ul.show {
-    display: block;
   }
 
   nav {
